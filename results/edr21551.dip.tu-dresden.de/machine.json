@@ -1,9 +1,0 @@
-{
-    "arch": "arm64",
-    "cpu": "Apple M1",
-    "machine": "edr21551.dip.tu-dresden.de",
-    "num_cpu": "8",
-    "os": "Darwin 25.2.0",
-    "ram": "8589934592",
-    "version": 1
-}
