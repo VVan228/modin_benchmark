@@ -2,7 +2,7 @@
     "version": 1,
     "project": "pandas",
     "project_url": "https://pandas.pydata.org/",
-    "repo": "..",
+    "repo": ".",
     "branches": ["main"],
     "environment_type": "rattler",
     "show_commit_url": "https://github.com/pandas-dev/pandas/commit/",
