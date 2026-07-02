@@ -2,7 +2,7 @@ from importlib import import_module
 
 import numpy as np
 
-import modin.pandas as pd
+import pandas as pd
 
 for imp in ["pandas.util", "pandas.tools.hashing"]:
     try:

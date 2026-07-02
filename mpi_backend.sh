@@ -68,8 +68,8 @@ pip install scipy
 
 
 
-#srun -N ${NODES} -c ${CPUS} asv machine --yes
-#srun -N ${NODES} -c ${CPUS} asv run -e -E existing
+srun -N ${NODES} -c ${CPUS} asv machine --yes
+srun -N ${NODES} -c ${CPUS} asv run -e -E existing
 asv publish
 #asv preview
 
