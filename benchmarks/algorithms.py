@@ -46,7 +46,7 @@ class Factorize:
     param_names = ["unique", "sort", "dtype"]
 
     def setup(self, unique, sort, dtype):
-        N = 10**10
+        N = 10**5
         data = _make_factorize_data(dtype, N)
         if not unique:
             data = data.repeat(5)
@@ -63,7 +63,7 @@ class FactorizePeakmem:
     param_names = ["dtype"]
 
     def setup(self, dtype):
-        N = 10**10
+        N = 10**5
         self.data = _make_factorize_data(dtype, N).repeat(5)
 
     def peakmem_factorize(self, dtype):
