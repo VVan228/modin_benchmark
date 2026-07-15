@@ -257,12 +257,6 @@ Requirement already satisfied: pyarrow in /data/horse/ws/vlle130h-python_virtual
 
 [notice] A new release of pip is available: 24.3.1 -> 26.1.2
 [notice] To update, run: pip install --upgrade pip
-· No information stored about machine 'i7186'. I know about 'i7107', 'i7108', 'i7147', 'i7148', 'i7177' and 'i7178'.
-  
-
-· No information stored about machine 'i7010'. I know about 'i7107', 'i7108', 'i7147', 'i7148', 'i7177', 'i7178' and 'i7186'.
-  
-
 I will now ask you some questions about this machine to identify it in the benchmarks.
 
 1. machine:  A unique name to identify this machine in the results.
@@ -270,7 +264,7 @@ I will now ask you some questions about this machine to identify it in the bench
    used to benchmark this project.  NOTE: If changed from the default,
    it will no longer match the hostname of this machine, and you may
    need to explicitly use the --machine argument to asv.
-machine [i7186]: 2. os:  The OS type and version of this machine.  For example,
+machine [i7014]: 2. os:  The OS type and version of this machine.  For example,
    'Macintosh OS-X 10.8'.
 os [Linux 5.14.0-687.25.1.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
    'i386' or 'x86_64'.
@@ -280,14 +274,14 @@ arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, inclu
 cpu [AMD EPYC 7702 64-Core Processor]: 5. num_cpu:  The number of CPUs in the system. For example, '4'.
 num_cpu [256]: 6. ram:  The amount of physical RAM on this machine.  For example,
    '4GB'.
-ram [540272832512]: I will now ask you some questions about this machine to identify it in the benchmarks.
+I will now ask you some questions about this machine to identify it in the benchmarks.
 
 1. machine:  A unique name to identify this machine in the results.
    May be anything, as long as it is unique across all the machines
    used to benchmark this project.  NOTE: If changed from the default,
    it will no longer match the hostname of this machine, and you may
    need to explicitly use the --machine argument to asv.
-machine [i7010]: 2. os:  The OS type and version of this machine.  For example,
+machine [i7014]: 2. os:  The OS type and version of this machine.  For example,
    'Macintosh OS-X 10.8'.
 os [Linux 5.14.0-687.25.1.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
    'i386' or 'x86_64'.
@@ -297,15 +291,41 @@ arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, inclu
 cpu [AMD EPYC 7702 64-Core Processor]: 5. num_cpu:  The number of CPUs in the system. For example, '4'.
 num_cpu [256]: 6. ram:  The amount of physical RAM on this machine.  For example,
    '4GB'.
-ram [540281294848]: · Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 
+ram [540280893440]: ram [540280893440]: I will now ask you some questions about this machine to identify it in the benchmarks.
+
+1. machine:  A unique name to identify this machine in the results.
+   May be anything, as long as it is unique across all the machines
+   used to benchmark this project.  NOTE: If changed from the default,
+   it will no longer match the hostname of this machine, and you may
+   need to explicitly use the --machine argument to asv.
+machine [i7013]: 2. os:  The OS type and version of this machine.  For example,
+   'Macintosh OS-X 10.8'.
+os [Linux 5.14.0-687.25.1.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
+   'i386' or 'x86_64'.
+arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, including
+   its speed and class.  For example, 'Intel(R) Core(TM) i5-2520M CPU
+   @ 2.50GHz (4 cores)'.
+cpu [AMD EPYC 7702 64-Core Processor]: 5. num_cpu:  The number of CPUs in the system. For example, '4'.
+num_cpu [256]: 6. ram:  The amount of physical RAM on this machine.  For example,
+   '4GB'.
+I will now ask you some questions about this machine to identify it in the benchmarks.
+
+1. machine:  A unique name to identify this machine in the results.
+   May be anything, as long as it is unique across all the machines
+   used to benchmark this project.  NOTE: If changed from the default,
+   it will no longer match the hostname of this machine, and you may
+   need to explicitly use the --machine argument to asv.
+machine [i7013]: 2. os:  The OS type and version of this machine.  For example,
+   'Macintosh OS-X 10.8'.
+os [Linux 5.14.0-687.25.1.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
+   'i386' or 'x86_64'.
+arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, including
+   its speed and class.  For example, 'Intel(R) Core(TM) i5-2520M CPU
+   @ 2.50GHz (4 cores)'.
+cpu [AMD EPYC 7702 64-Core Processor]: 5. num_cpu:  The number of CPUs in the system. For example, '4'.
+num_cpu [256]: 6. ram:  The amount of physical RAM on this machine.  For example,
+   '4GB'.
+ram [540280893440]: ram [540280893440]: · Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 
 · Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 
-· Discovering benchmarks
-· Running 6 total benchmarks (1 commits * 1 environments * 6 benchmarks)
-[ 0.00%] ·· Benchmarking existing-py_data_horse_ws_vlle130h-python_virtual_environment_bin_python3
-· Discovering benchmarks
-· Running 6 total benchmarks (1 commits * 1 environments * 6 benchmarks)
-[ 0.00%] ·· Benchmarking existing-py_data_horse_ws_vlle130h-python_virtual_environment_bin_python3
-[ 8.33%] ··· Running (algorithms.Duplicated.time_duplicated--).
-[ 8.33%] ··· Running (algorithms.Duplicated.time_duplicated--).
-[16.67%] ··· Running (algorithms.DuplicatedMaskedArray.time_duplicated--)..
-[16.67%] ··· Running (algorithms.DuplicatedMaskedArray.time_duplicated--)..
+· Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 
+· Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 

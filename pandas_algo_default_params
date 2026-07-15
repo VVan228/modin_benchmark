@@ -1,0 +1,301 @@
+[58.33%] ··· algorithms.Duplicated.time_duplicated                           ok
+[58.33%] ··· ======== ======= ======================== =============
+              unique    keep           dtype                        
+             -------- ------- ------------------------ -------------
+               True    first           int64            2.41±0.07μs 
+               True    first           uint64           2.43±0.02μs 
+               True    first          float64           2.41±0.05μs 
+               True    first           string           2.36±0.01μs 
+               True    first       datetime64[ns]       2.37±0.01μs 
+               True    first     datetime64[ns, tz]     2.32±0.01μs 
+               True    first   timestamp[ms][pyarrow]   2.52±0.02μs 
+               True    first    duration[s][pyarrow]    2.51±0.03μs 
+               True     last           int64            2.32±0.05μs 
+               True     last           uint64           2.30±0.08μs 
+               True     last          float64           2.31±0.07μs 
+               True     last           string           2.27±0.07μs 
+               True     last       datetime64[ns]       2.30±0.09μs 
+               True     last     datetime64[ns, tz]     2.31±0.05μs 
+               True     last   timestamp[ms][pyarrow]   2.50±0.08μs 
+               True     last    duration[s][pyarrow]    2.52±0.09μs 
+               True    False           int64            2.27±0.08μs 
+               True    False           uint64           2.29±0.06μs 
+               True    False          float64           2.29±0.08μs 
+               True    False           string           2.26±0.09μs 
+               True    False       datetime64[ns]       2.30±0.08μs 
+               True    False     datetime64[ns, tz]     2.31±0.06μs 
+               True    False   timestamp[ms][pyarrow]   2.56±0.06μs 
+               True    False    duration[s][pyarrow]    2.50±0.09μs 
+              False    first           int64             4.62±0.2ms 
+              False    first           uint64           5.30±0.05ms 
+              False    first          float64             10.2±2ms  
+              False    first           string            11.5±0.2ms 
+              False    first       datetime64[ns]        6.36±0.1ms 
+              False    first     datetime64[ns, tz]      6.43±0.2ms 
+              False    first   timestamp[ms][pyarrow]    5.57±0.2ms 
+              False    first    duration[s][pyarrow]    5.12±0.03ms 
+              False     last           int64             5.14±0.2ms 
+              False     last           uint64            5.32±0.3ms 
+              False     last          float64            8.20±0.1ms 
+              False     last           string            16.0±0.3ms 
+              False     last       datetime64[ns]        6.06±0.1ms 
+              False     last     datetime64[ns, tz]      6.32±0.2ms 
+              False     last   timestamp[ms][pyarrow]    5.10±0.3ms 
+              False     last    duration[s][pyarrow]     5.19±0.2ms 
+              False    False           int64             8.44±0.1ms 
+              False    False           uint64            8.88±0.4ms 
+              False    False          float64             14.7±2ms  
+              False    False           string             20.8±2ms  
+              False    False       datetime64[ns]         16.1±2ms  
+              False    False     datetime64[ns, tz]       15.5±2ms  
+              False    False   timestamp[ms][pyarrow]    8.59±0.2ms 
+              False    False    duration[s][pyarrow]    8.61±0.05ms 
+             ======== ======= ======================== =============
+
+[66.67%] ··· ...rithms.DuplicatedMaskedArray.time_duplicated                 ok
+[66.67%] ··· ======== ======= ============= =============
+             --                          dtype           
+             ---------------- ---------------------------
+              unique    keep      Int64        Float64   
+             ======== ======= ============= =============
+               True    first     727±3μs     2.79±0.03ms 
+               True     last     708±3μs     2.74±0.01ms 
+               True    False   1.04±0.01ms   3.75±0.02ms 
+              False    first     5.92±1ms      10.2±2ms  
+              False     last     5.31±1ms      9.74±2ms  
+              False    False     8.44±2ms     13.4±0.6ms 
+             ======== ======= ============= =============
+
+[58.33%] ··· algorithms.Duplicated.time_duplicated                           ok
+[58.33%] ··· ======== ======= ======================== =============
+              unique    keep           dtype                        
+             -------- ------- ------------------------ -------------
+               True    first           int64            1.95±0.03μs 
+               True    first           uint64           1.99±0.03μs 
+               True    first          float64           1.96±0.01μs 
+               True    first           string           2.00±0.01μs 
+               True    first       datetime64[ns]       1.97±0.01μs 
+               True    first     datetime64[ns, tz]     1.97±0.01μs 
+               True    first   timestamp[ms][pyarrow]   2.14±0.01μs 
+               True    first    duration[s][pyarrow]    2.14±0.01μs 
+               True     last           int64              1.96±0μs  
+               True     last           uint64             1.96±0μs  
+               True     last          float64           1.95±0.01μs 
+               True     last           string             1.95±0μs  
+               True     last       datetime64[ns]       1.97±0.01μs 
+               True     last     datetime64[ns, tz]     1.95±0.01μs 
+               True     last   timestamp[ms][pyarrow]   2.13±0.01μs 
+               True     last    duration[s][pyarrow]      2.13±0μs  
+               True    False           int64            1.95±0.01μs 
+               True    False           uint64           1.98±0.01μs 
+               True    False          float64           1.95±0.01μs 
+               True    False           string           1.95±0.01μs 
+               True    False       datetime64[ns]       1.95±0.01μs 
+               True    False     datetime64[ns, tz]       1.94±0μs  
+               True    False   timestamp[ms][pyarrow]   2.14±0.01μs 
+               True    False    duration[s][pyarrow]    2.14±0.01μs 
+              False    first           int64            4.04±0.05ms 
+              False    first           uint64           4.01±0.05ms 
+              False    first          float64           6.76±0.07ms 
+              False    first           string            8.90±0.1ms 
+              False    first       datetime64[ns]        5.29±0.2ms 
+              False    first     datetime64[ns, tz]      5.32±0.2ms 
+              False    first   timestamp[ms][pyarrow]   4.18±0.02ms 
+              False    first    duration[s][pyarrow]    4.21±0.03ms 
+              False     last           int64            3.91±0.02ms 
+              False     last           uint64            4.39±0.4ms 
+              False     last          float64           6.72±0.05ms 
+              False     last           string             16.7±1ms  
+              False     last       datetime64[ns]        4.96±0.1ms 
+              False     last     datetime64[ns, tz]       8.52±2ms  
+              False     last   timestamp[ms][pyarrow]   4.08±0.05ms 
+              False     last    duration[s][pyarrow]     4.31±0.3ms 
+              False    False           int64             8.30±0.1ms 
+              False    False           uint64            7.17±0.1ms 
+              False    False          float64            13.2±0.2ms 
+              False    False           string             16.6±2ms  
+              False    False       datetime64[ns]        12.8±0.3ms 
+              False    False     datetime64[ns, tz]      12.6±0.3ms 
+              False    False   timestamp[ms][pyarrow]     7.19±2ms  
+              False    False    duration[s][pyarrow]    7.31±0.02ms 
+             ======== ======= ======================== =============
+
+[75.00%] ··· algorithms.Factorize.time_factorize                             ok
+[75.00%] ··· ======== ======= ==================== =============
+              unique    sort         dtype                      
+             -------- ------- -------------------- -------------
+               True     True         int64          2.59±0.02ms 
+               True     True        float64         13.1±0.08ms 
+               True     True         object          44.8±0.5ms 
+               True     True       object_str         95.4±1ms  
+               True     True     datetime64[ns]      94.1±0.4μs 
+               True     True   datetime64[ns, tz]    95.5±0.3μs 
+               True     True         Int64          3.25±0.02ms 
+               True     True    string[pyarrow]      20.4±0.2ms 
+               True    False         int64          1.53±0.01ms 
+               True    False        float64         4.57±0.02ms 
+               True    False         object          9.33±0.1ms 
+               True    False       object_str        8.94±0.1ms 
+               True    False     datetime64[ns]      94.1±0.1μs 
+               True    False   datetime64[ns, tz]    96.0±0.3μs 
+               True    False         Int64          1.60±0.03ms 
+               True    False    string[pyarrow]      8.05±0.1ms 
+              False     True         int64           11.5±0.9ms 
+              False     True        float64           26.3±1ms  
+              False     True         object           73.2±1ms  
+              False     True       object_str         113±1ms   
+              False     True     datetime64[ns]      21.3±0.7ms 
+              False     True   datetime64[ns, tz]     22.4±2ms  
+              False     True         Int64           12.4±0.8ms 
+              False     True    string[pyarrow]      33.5±0.3ms 
+              False    False         int64           10.8±0.5ms 
+              False    False        float64           18.3±2ms  
+              False    False         object          32.2±0.9ms 
+              False    False       object_str         28.3±1ms  
+              False    False     datetime64[ns]       18.7±2ms  
+              False    False   datetime64[ns, tz]    16.0±0.9ms 
+              False    False         Int64           9.30±0.9ms 
+              False    False    string[pyarrow]      17.5±0.4ms 
+             ======== ======= ==================== =============
+
+[83.33%] ··· algorithms.FactorizePeakmem.peakmem_factorize                   ok
+[83.33%] ··· ==================== ======
+                    dtype               
+             -------------------- ------
+                    int64          118M 
+                   float64         116M 
+                    object         107M 
+                  object_str       124M 
+                datetime64[ns]     116M 
+              datetime64[ns, tz]   115M 
+                    Int64          117M 
+               string[pyarrow]     140M 
+             ==================== ======
+
+[66.67%] ··· ...rithms.DuplicatedMaskedArray.time_duplicated                 ok
+[66.67%] ··· ======== ======= ============ =============
+             --                         dtype           
+             ---------------- --------------------------
+              unique    keep     Int64        Float64   
+             ======== ======= ============ =============
+               True    first   571±0.8μs    2.21±0.05ms 
+               True     last    554±4μs     2.15±0.01ms 
+               True    False    810±3μs     3.04±0.06ms 
+              False    first   4.25±0.7ms    6.60±0.6ms 
+              False     last   4.15±0.7ms    6.69±0.7ms 
+              False    False    7.20±2ms      14.0±2ms  
+             ======== ======= ============ =============
+
+[91.67%] ··· algorithms.Quantile.time_quantile                               ok
+[91.67%] ··· ========== =============== ============= =============
+             --                                    dtype           
+             -------------------------- ---------------------------
+              quantile   interpolation     float64        int64    
+             ========== =============== ============= =============
+                 0           linear      2.69±0.07ms   1.90±0.01ms 
+                 0          nearest      1.95±0.05ms   1.05±0.02ms 
+                 0           lower       1.79±0.05ms   1.09±0.04ms 
+                 0           higher      1.85±0.09ms     1.04±0ms  
+                 0          midpoint     2.73±0.02ms   1.90±0.01ms 
+                0.5          linear       5.12±0.1ms     1.87±0ms  
+                0.5         nearest       4.21±0.1ms   1.18±0.02ms 
+                0.5          lower       4.06±0.03ms   1.20±0.02ms 
+                0.5          higher      4.06±0.01ms   1.20±0.02ms 
+                0.5         midpoint     4.97±0.02ms   1.97±0.07ms 
+                 1           linear       1.92±0.1ms   1.60±0.02ms 
+                 1          nearest      1.31±0.08ms     932±8μs   
+                 1           lower       1.31±0.07ms     944±30μs  
+                 1           higher      1.24±0.01ms     961±10μs  
+                 1          midpoint     1.87±0.01ms   1.50±0.01ms 
+             ========== =============== ============= =============
+
+[100.00%] ··· algorithms.SortIntegerArray.time_argsort                        ok
+[100.00%] ··· ======== =============
+               param1               
+              -------- -------------
+                1000    21.6±0.08μs 
+               100000     841±7μs   
+              ======== =============
+
+[75.00%] ··· algorithms.Factorize.time_factorize                             ok
+[75.00%] ··· ======== ======= ==================== =============
+              unique    sort         dtype                      
+             -------- ------- -------------------- -------------
+               True     True         int64          2.06±0.03ms 
+               True     True        float64          10.0±0.2ms 
+               True     True         object          36.4±0.6ms 
+               True     True       object_str        75.5±0.4ms 
+               True     True     datetime64[ns]      72.7±0.3μs 
+               True     True   datetime64[ns, tz]    73.6±0.6μs 
+               True     True         Int64          2.56±0.01ms 
+               True     True    string[pyarrow]      16.5±0.1ms 
+               True    False         int64            1.19±0ms  
+               True    False        float64         3.63±0.03ms 
+               True    False         object         7.35±0.09ms 
+               True    False       object_str       7.02±0.06ms 
+               True    False     datetime64[ns]      71.9±0.5μs 
+               True    False   datetime64[ns, tz]    73.4±0.4μs 
+               True    False         Int64          1.23±0.01ms 
+               True    False    string[pyarrow]      6.52±0.1ms 
+              False     True         int64           10.8±0.7ms 
+              False     True        float64           22.4±1ms  
+              False     True         object          57.6±0.4ms 
+              False     True       object_str        92.0±0.5ms 
+              False     True     datetime64[ns]      19.9±0.4ms 
+              False     True   datetime64[ns, tz]    20.5±0.4ms 
+              False     True         Int64           9.93±0.6ms 
+              False     True    string[pyarrow]      27.0±0.3ms 
+              False    False         int64            8.68±1ms  
+              False    False        float64           15.8±2ms  
+              False    False         object           27.4±1ms  
+              False    False       object_str        23.8±0.2ms 
+              False    False     datetime64[ns]       14.6±2ms  
+              False    False   datetime64[ns, tz]     15.4±1ms  
+              False    False         Int64            8.02±1ms  
+              False    False    string[pyarrow]      14.4±0.2ms 
+             ======== ======= ==================== =============
+
+[83.33%] ··· algorithms.FactorizePeakmem.peakmem_factorize                   ok
+[83.33%] ··· ==================== ======
+                    dtype               
+             -------------------- ------
+                    int64          120M 
+                   float64         121M 
+                    object         109M 
+                  object_str       130M 
+                datetime64[ns]     121M 
+              datetime64[ns, tz]   122M 
+                    Int64          121M 
+               string[pyarrow]     140M 
+             ==================== ======
+
+[91.67%] ··· algorithms.Quantile.time_quantile                               ok
+[91.67%] ··· ========== =============== ============= =============
+             --                                    dtype           
+             -------------------------- ---------------------------
+              quantile   interpolation     float64        int64    
+             ========== =============== ============= =============
+                 0           linear      2.10±0.01ms   1.47±0.01ms 
+                 0          nearest        1.37±0ms      830±50μs  
+                 0           lower       1.37±0.01ms     799±3μs   
+                 0           higher      1.38±0.01ms     802±10μs  
+                 0          midpoint     2.15±0.02ms     1.49±0ms  
+                0.5          linear        3.90±0ms    1.71±0.06ms 
+                0.5         nearest      3.19±0.01ms     883±1μs   
+                0.5          lower       3.18±0.01ms     879±10μs  
+                0.5          higher       3.47±0.2ms     878±8μs   
+                0.5         midpoint      4.09±0.1ms    1.64±0.2ms 
+                 1           linear        1.42±0ms     1.26±0.1ms 
+                 1          nearest        954±5μs       711±2μs   
+                 1           lower         988±60μs      710±4μs   
+                 1           higher        971±9μs       721±5μs   
+                 1          midpoint     1.45±0.01ms     1.19±0ms  
+             ========== =============== ============= =============
+
+[100.00%] ··· algorithms.SortIntegerArray.time_argsort                        ok
+[100.00%] ··· ======== =============
+               param1               
+              -------- -------------
+                1000    17.2±0.09μs 
+               100000     639±4μs   
+              ======== =============

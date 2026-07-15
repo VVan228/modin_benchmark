@@ -1,10 +1,11 @@
 #!/bin/bash
-#SBATCH -N 2
-#SBATCH -c 4
+#SBATCH --nodes 2
+#SBATCH --tasks-per-node 2
+#SBATCH --cpus-per-task 1
 #SBATCH -t 02:00:00
 
-NODES=2
-CPUS=4
+#NODES=2
+#CPUS=4
 MODE="ray"
 
 #3.59376
@@ -28,7 +29,7 @@ source "${VENV}"/bin/activate
 pip install --force-reinstall -v "mpi4py==4.1.0"
 pip install --force-reinstall -v "unidist[mpi]==0.7.2"
 pip install "modin[all]"
-export MODIN_CPUS=${CPUS}
+#export MODIN_CPUS=${CPUS}
 
 
 
@@ -50,7 +51,7 @@ then
 	export MODIN_ENGINE=unidist
 	export UNIDIST_BACKEND=mpi
 	#export OMPI_MCA_rmaps_default_mapping_policy=:oversubscribe
-	export UNIDIST_CPUS=${CPUS+1}
+	#export UNIDIST_CPUS=${CPUS+1}
 	export UNIDIST_MPI_HOSTS=i7017,i7015
 	#export MODIN_NPARTITIONS=${NODES}
 	export UNIDIST_MPI_SPAWN=False
@@ -69,9 +70,9 @@ pip install pyarrow
 
 
 
-srun -N ${NODES} -c ${CPUS} asv machine --yes
-srun -N ${NODES} -c ${CPUS} asv run -e -E existing
-asv publish
+srun --nodes=2 --tasks-per-node=2 --cpus-per-task=1 asv machine --yes
+srun --nodes=2 --tasks-per-node=2 --cpus-per-task=1 asv run -e -E existing
+#asv publish
 #asv preview
 
 #srun -N ${NODES} -c ${CPUS} python -u test.py
