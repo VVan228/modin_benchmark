@@ -65,6 +65,7 @@ pip install asv
 #pip install odfpy
 pip install matplotlib
 pip install scipy
+pip install pyarrow
 
 
 

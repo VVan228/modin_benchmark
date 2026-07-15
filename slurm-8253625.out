@@ -12,7 +12,7 @@ Module Python/3.13.1 and 8 dependencies loaded.
 Module OpenMPI/5.0.7 and 10 dependencies loaded.
 Info: reusing workspace.
 remaining extensions  : 10
-remaining time in days: 0
+remaining time in days: -5
 Using pip 24.3.1 from /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages/pip (python 3.13)
 Collecting mpi4py==4.1.0
   Obtaining dependency information for mpi4py==4.1.0 from https://files.pythonhosted.org/packages/4b/ba/a5e42c71566f92a83403f137fb09486408d6133d2d725c3b0b764a641c60/mpi4py-4.1.0-cp313-cp313-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata
@@ -104,8 +104,7 @@ Requirement already satisfied: dask>=2.22.0 in /data/horse/ws/vlle130h-python_vi
 Requirement already satisfied: distributed>=2.22.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin[all]) (2026.7.0)
 Requirement already satisfied: ray<3,>=2.10.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin[all]) (2.56.0)
 Requirement already satisfied: pyarrow>=10.0.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin[all]) (24.0.0)
-Collecting modin-spreadsheet>=0.1.0 (from modin[all])
-  Using cached modin_spreadsheet-0.1.2-py2.py3-none-any.whl.metadata (587 bytes)
+Requirement already satisfied: modin-spreadsheet>=0.1.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin[all]) (0.1.2)
 Requirement already satisfied: dataframe-api-compat>=0.2.7 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin[all]) (0.2.7)
 Requirement already satisfied: click>=8.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from dask>=2.22.0->modin[all]) (8.4.2)
 Requirement already satisfied: cloudpickle>=3.0.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from dask>=2.22.0->modin[all]) (3.1.2)
@@ -119,10 +118,8 @@ Requirement already satisfied: sortedcontainers>=2.0.5 in /data/horse/ws/vlle130
 Requirement already satisfied: tblib!=3.2.0,!=3.2.1,>=1.6.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from distributed>=2.22.0->modin[all]) (3.2.2)
 Requirement already satisfied: tornado>=6.2.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from distributed>=2.22.0->modin[all]) (6.5.7)
 Requirement already satisfied: zict>=3.0.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from distributed>=2.22.0->modin[all]) (3.0.0)
-Collecting jupyter>=1.0.0 (from modin-spreadsheet>=0.1.0->modin[all])
-  Using cached jupyter-1.1.1-py2.py3-none-any.whl.metadata (2.0 kB)
-Collecting notebook>=6.0.3 (from modin-spreadsheet>=0.1.0->modin[all])
-  Using cached notebook-7.6.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: jupyter>=1.0.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin-spreadsheet>=0.1.0->modin[all]) (1.1.1)
+Requirement already satisfied: notebook>=6.0.3 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin-spreadsheet>=0.1.0->modin[all]) (7.6.0)
 Requirement already satisfied: ipywidgets>=7.0.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from modin-spreadsheet>=0.1.0->modin[all]) (8.1.8)
 Requirement already satisfied: python-dateutil>=2.8.2 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from pandas<2.4,>=2.2->modin[all]) (2.9.0.post0)
 Requirement already satisfied: pytz>=2020.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from pandas<2.4,>=2.2->modin[all]) (2026.2)
@@ -137,20 +134,14 @@ Requirement already satisfied: traitlets>=4.3.1 in /data/horse/ws/vlle130h-pytho
 Requirement already satisfied: widgetsnbextension~=4.0.14 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from ipywidgets>=7.0.0->modin-spreadsheet>=0.1.0->modin[all]) (4.0.15)
 Requirement already satisfied: jupyterlab_widgets~=3.0.15 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from ipywidgets>=7.0.0->modin-spreadsheet>=0.1.0->modin[all]) (3.0.16)
 Requirement already satisfied: MarkupSafe>=2.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jinja2>=2.10.3->distributed>=2.22.0->modin[all]) (3.0.3)
-Collecting jupyter-console (from jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached jupyter_console-6.6.3-py3-none-any.whl.metadata (5.8 kB)
-Collecting nbconvert (from jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached nbconvert-7.17.1-py3-none-any.whl.metadata (8.4 kB)
+Requirement already satisfied: jupyter-console in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (6.6.3)
+Requirement already satisfied: nbconvert in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (7.17.1)
 Requirement already satisfied: ipykernel in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (7.3.0)
-Collecting jupyterlab (from jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached jupyterlab-4.6.1-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: jupyterlab in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (4.6.1)
 Requirement already satisfied: jupyter-builder<2,>=1.0.2 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (1.0.2)
-Collecting jupyter-server<3,>=2.19.0 (from notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached jupyter_server-2.20.0-py3-none-any.whl.metadata (8.5 kB)
-Collecting jupyterlab-server<3,>=2.28.0 (from notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached jupyterlab_server-2.28.0-py3-none-any.whl.metadata (5.9 kB)
-Collecting notebook-shim<0.3,>=0.2 (from notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: jupyter-server<3,>=2.19.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (2.20.0)
+Requirement already satisfied: jupyterlab-server<3,>=2.28.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (2.28.0)
+Requirement already satisfied: notebook-shim<0.3,>=0.2 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (0.2.4)
 Requirement already satisfied: six>=1.5 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from python-dateutil>=2.8.2->pandas<2.4,>=2.2->modin[all]) (1.17.0)
 Requirement already satisfied: attrs>=22.2.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jsonschema->ray<3,>=2.10.0->modin[all]) (26.1.0)
 Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jsonschema->ray<3,>=2.10.0->modin[all]) (2025.9.1)
@@ -172,11 +163,9 @@ Requirement already satisfied: jupyter-core in /data/horse/ws/vlle130h-python_vi
 Requirement already satisfied: anyio>=3.1.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (4.14.1)
 Requirement already satisfied: argon2-cffi>=21.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (25.1.0)
 Requirement already satisfied: jupyter-client>=7.4.4 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (8.9.1)
-Collecting jupyter-events>=0.11.0 (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached jupyter_events-0.12.1-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: jupyter-events>=0.11.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (0.12.1)
 Requirement already satisfied: jupyter-server-terminals>=0.4.4 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (0.5.4)
-Collecting nbformat>=5.3.0 (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: nbformat>=5.3.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (5.10.4)
 Requirement already satisfied: prometheus-client>=0.9 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (0.25.0)
 Requirement already satisfied: pyzmq>=24 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (27.1.0)
 Requirement already satisfied: send2trash>=1.8.2 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (2.1.0)
@@ -184,8 +173,7 @@ Requirement already satisfied: terminado>=0.8.3 in /data/horse/ws/vlle130h-pytho
 Requirement already satisfied: websocket-client>=1.7 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (1.9.0)
 Requirement already satisfied: async-lru>=1.0.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyterlab->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (2.3.0)
 Requirement already satisfied: httpx<1,>=0.25.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyterlab->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (0.28.1)
-Collecting jupyter-lsp>=2.0.0 (from jupyterlab->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached jupyter_lsp-2.3.1-py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: jupyter-lsp>=2.0.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyterlab->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (2.3.1)
 Requirement already satisfied: debugpy>=1.6.5 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from ipykernel->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (1.8.21)
 Requirement already satisfied: nest-asyncio2>=1.7.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from ipykernel->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (1.7.2)
 Requirement already satisfied: babel>=2.10 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from jupyterlab-server<3,>=2.28.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (2.18.0)
@@ -195,8 +183,7 @@ Requirement already satisfied: bleach!=5.0.0 in /data/horse/ws/vlle130h-python_v
 Requirement already satisfied: defusedxml in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from nbconvert->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (0.7.1)
 Requirement already satisfied: jupyterlab-pygments in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from nbconvert->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (0.3.0)
 Requirement already satisfied: mistune<4,>=2.0.3 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from nbconvert->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (3.3.2)
-Collecting nbclient>=0.5.0 (from nbconvert->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all])
-  Using cached nbclient-0.11.0-py3-none-any.whl.metadata (7.3 kB)
+Requirement already satisfied: nbclient>=0.5.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from nbconvert->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (0.11.0)
 Requirement already satisfied: pandocfilters>=1.4.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from nbconvert->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (1.5.1)
 Requirement already satisfied: argon2-cffi-bindings in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from argon2-cffi>=21.1->jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (25.1.0)
 Requirement already satisfied: webencodings in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert->jupyter>=1.0.0->modin-spreadsheet>=0.1.0->modin[all]) (0.5.1)
@@ -225,109 +212,55 @@ Requirement already satisfied: cffi>=1.0.1 in /data/horse/ws/vlle130h-python_vir
 Requirement already satisfied: pycparser in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (3.0)
 Requirement already satisfied: lark>=1.2.2 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (1.3.1)
 Requirement already satisfied: arrow>=0.15.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook>=6.0.3->modin-spreadsheet>=0.1.0->modin[all]) (1.4.0)
-Using cached modin_spreadsheet-0.1.2-py2.py3-none-any.whl (1.8 MB)
-Using cached jupyter-1.1.1-py2.py3-none-any.whl (2.7 kB)
-Using cached notebook-7.6.0-py3-none-any.whl (5.5 MB)
-Using cached jupyter_server-2.20.0-py3-none-any.whl (393 kB)
-Using cached jupyterlab-4.6.1-py3-none-any.whl (17.2 MB)
-Using cached jupyterlab_server-2.28.0-py3-none-any.whl (59 kB)
-Using cached nbconvert-7.17.1-py3-none-any.whl (261 kB)
-Using cached notebook_shim-0.2.4-py3-none-any.whl (13 kB)
-Using cached jupyter_console-6.6.3-py3-none-any.whl (24 kB)
-Using cached jupyter_events-0.12.1-py3-none-any.whl (19 kB)
-Using cached jupyter_lsp-2.3.1-py3-none-any.whl (77 kB)
-Using cached nbclient-0.11.0-py3-none-any.whl (25 kB)
-Using cached nbformat-5.10.4-py3-none-any.whl (78 kB)
-Installing collected packages: nbformat, jupyter-console, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook, jupyter, modin-spreadsheet
-Successfully installed jupyter-1.1.1 jupyter-console-6.6.3 jupyter-events-0.12.1 jupyter-lsp-2.3.1 jupyter-server-2.20.0 jupyterlab-4.6.1 jupyterlab-server-2.28.0 modin-spreadsheet-0.1.2 nbclient-0.11.0 nbconvert-7.17.1 nbformat-5.10.4 notebook-7.6.0 notebook-shim-0.2.4
 
 [notice] A new release of pip is available: 24.3.1 -> 26.1.2
 [notice] To update, run: pip install --upgrade pip
-Collecting asv
-  Using cached asv-0.6.6-cp36-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.9 kB)
-Collecting asv-runner>=0.2.5 (from asv)
-  Using cached asv_runner-0.2.5-py3-none-any.whl.metadata (2.7 kB)
+Requirement already satisfied: asv in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (0.6.6)
+Requirement already satisfied: asv-runner>=0.2.5 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (0.2.5)
 Requirement already satisfied: json5 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (0.15.0)
-Collecting build (from asv)
-  Using cached build-1.5.0-py3-none-any.whl.metadata (5.7 kB)
-Collecting tabulate (from asv)
-  Using cached tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
-Collecting virtualenv (from asv)
-  Downloading virtualenv-21.6.0-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: build in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (1.5.0)
+Requirement already satisfied: tabulate in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (0.10.0)
+Requirement already satisfied: virtualenv in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (21.6.0)
 Requirement already satisfied: packaging in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (26.2)
-Collecting importlib-metadata (from asv)
-  Using cached importlib_metadata-9.0.0-py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: importlib-metadata in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (9.0.0)
 Requirement already satisfied: pyyaml in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (6.0.3)
-Collecting pympler (from asv)
-  Using cached Pympler-1.1-py3-none-any.whl.metadata (3.6 kB)
-Collecting pyproject_hooks (from build->asv)
-  Using cached pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
-Collecting zipp>=3.20 (from importlib-metadata->asv)
-  Using cached zipp-4.1.0-py3-none-any.whl.metadata (3.6 kB)
-Collecting distlib<1,>=0.3.7 (from virtualenv->asv)
-  Using cached distlib-0.4.3-py2.py3-none-any.whl.metadata (5.3 kB)
+Requirement already satisfied: pympler in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from asv) (1.1)
+Requirement already satisfied: pyproject_hooks in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from build->asv) (1.2.0)
+Requirement already satisfied: zipp>=3.20 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from importlib-metadata->asv) (4.1.0)
+Requirement already satisfied: distlib<1,>=0.3.7 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from virtualenv->asv) (0.4.3)
 Requirement already satisfied: filelock<4,>=3.24.2 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from virtualenv->asv) (3.29.7)
 Requirement already satisfied: platformdirs<5,>=3.9.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from virtualenv->asv) (4.10.0)
-Collecting python-discovery>=1.4.2 (from virtualenv->asv)
-  Downloading python_discovery-1.4.3-py3-none-any.whl.metadata (5.6 kB)
-Using cached asv-0.6.6-cp36-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (280 kB)
-Using cached asv_runner-0.2.5-py3-none-any.whl (50 kB)
-Using cached build-1.5.0-py3-none-any.whl (26 kB)
-Using cached importlib_metadata-9.0.0-py3-none-any.whl (27 kB)
-Using cached Pympler-1.1-py3-none-any.whl (165 kB)
-Using cached tabulate-0.10.0-py3-none-any.whl (39 kB)
-Downloading virtualenv-21.6.0-py3-none-any.whl (5.5 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 43.4 MB/s eta 0:00:00
-Using cached distlib-0.4.3-py2.py3-none-any.whl (470 kB)
-Downloading python_discovery-1.4.3-py3-none-any.whl (33 kB)
-Using cached zipp-4.1.0-py3-none-any.whl (10 kB)
-Using cached pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
-Installing collected packages: distlib, zipp, tabulate, python-discovery, pyproject_hooks, pympler, asv-runner, virtualenv, importlib-metadata, build, asv
-Successfully installed asv-0.6.6 asv-runner-0.2.5 build-1.5.0 distlib-0.4.3 importlib-metadata-9.0.0 pympler-1.1 pyproject_hooks-1.2.0 python-discovery-1.4.3 tabulate-0.10.0 virtualenv-21.6.0 zipp-4.1.0
+Requirement already satisfied: python-discovery>=1.4.2 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from virtualenv->asv) (1.4.3)
 
 [notice] A new release of pip is available: 24.3.1 -> 26.1.2
 [notice] To update, run: pip install --upgrade pip
-Collecting matplotlib
-  Using cached matplotlib-3.11.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
-Collecting contourpy>=1.0.1 (from matplotlib)
-  Using cached contourpy-1.3.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
-Collecting cycler>=0.10 (from matplotlib)
-  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
-Collecting fonttools>=4.22.0 (from matplotlib)
-  Using cached fonttools-4.63.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
-Collecting kiwisolver>=1.3.1 (from matplotlib)
-  Using cached kiwisolver-1.5.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+Requirement already satisfied: matplotlib in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (3.11.0)
+Requirement already satisfied: contourpy>=1.0.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (1.5.0)
 Requirement already satisfied: numpy>=1.25 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (2.5.1)
 Requirement already satisfied: packaging>=20.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (26.2)
-Collecting pillow>=9 (from matplotlib)
-  Using cached pillow-12.3.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
-Collecting pyparsing>=3 (from matplotlib)
-  Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: pillow>=9 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (12.3.0)
+Requirement already satisfied: pyparsing>=3 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (3.3.2)
 Requirement already satisfied: python-dateutil>=2.7 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from matplotlib) (2.9.0.post0)
 Requirement already satisfied: six>=1.5 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
-Using cached matplotlib-3.11.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
-Using cached contourpy-1.3.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
-Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
-Using cached fonttools-4.63.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
-Using cached kiwisolver-1.5.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
-Using cached pillow-12.3.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
-Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
-Installing collected packages: pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib
-Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 kiwisolver-1.5.0 matplotlib-3.11.0 pillow-12.3.0 pyparsing-3.3.2
 
 [notice] A new release of pip is available: 24.3.1 -> 26.1.2
 [notice] To update, run: pip install --upgrade pip
-Collecting scipy
-  Using cached scipy-1.18.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Requirement already satisfied: scipy in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (1.18.0)
 Requirement already satisfied: numpy<2.8,>=2.0.0 in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (from scipy) (2.5.1)
-Using cached scipy-1.18.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
-Installing collected packages: scipy
-ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: '/data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages/scipy/integrate/_quadpack.cpython-313-x86_64-linux-gnu.so'
-
 
 [notice] A new release of pip is available: 24.3.1 -> 26.1.2
 [notice] To update, run: pip install --upgrade pip
-· No information stored about machine 'i7147'. I know about 'i7107', 'i7108', 'i7177' and 'i7178'.
+Requirement already satisfied: pyarrow in /data/horse/ws/vlle130h-python_virtual_environment/lib/python3.13/site-packages (24.0.0)
+
+[notice] A new release of pip is available: 24.3.1 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+· No information stored about machine 'i7186'. I know about 'i7107', 'i7108', 'i7147', 'i7148', 'i7177' and 'i7178'.
+  
+
+· No information stored about machine 'i7010'. I know about 'i7107', 'i7108', 'i7147', 'i7148', 'i7177', 'i7178' and 'i7186'.
   
 
 I will now ask you some questions about this machine to identify it in the benchmarks.
@@ -337,9 +270,9 @@ I will now ask you some questions about this machine to identify it in the bench
    used to benchmark this project.  NOTE: If changed from the default,
    it will no longer match the hostname of this machine, and you may
    need to explicitly use the --machine argument to asv.
-machine [i7147]: 2. os:  The OS type and version of this machine.  For example,
+machine [i7186]: 2. os:  The OS type and version of this machine.  For example,
    'Macintosh OS-X 10.8'.
-os [Linux 5.14.0-687.20.3.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
+os [Linux 5.14.0-687.25.1.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
    'i386' or 'x86_64'.
 arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, including
    its speed and class.  For example, 'Intel(R) Core(TM) i5-2520M CPU
@@ -347,19 +280,16 @@ arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, inclu
 cpu [AMD EPYC 7702 64-Core Processor]: 5. num_cpu:  The number of CPUs in the system. For example, '4'.
 num_cpu [256]: 6. ram:  The amount of physical RAM on this machine.  For example,
    '4GB'.
-ram [540280958976]: · No information stored about machine 'i7148'. I know about 'i7107', 'i7108', 'i7147', 'i7177' and 'i7178'.
-  
-
-I will now ask you some questions about this machine to identify it in the benchmarks.
+ram [540272832512]: I will now ask you some questions about this machine to identify it in the benchmarks.
 
 1. machine:  A unique name to identify this machine in the results.
    May be anything, as long as it is unique across all the machines
    used to benchmark this project.  NOTE: If changed from the default,
    it will no longer match the hostname of this machine, and you may
    need to explicitly use the --machine argument to asv.
-machine [i7148]: 2. os:  The OS type and version of this machine.  For example,
+machine [i7010]: 2. os:  The OS type and version of this machine.  For example,
    'Macintosh OS-X 10.8'.
-os [Linux 5.14.0-687.20.3.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
+os [Linux 5.14.0-687.25.1.el9_8.x86_64]: 3. arch:  The generic CPU architecture of this machine.  For example,
    'i386' or 'x86_64'.
 arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, including
    its speed and class.  For example, 'Intel(R) Core(TM) i5-2520M CPU
@@ -367,348 +297,15 @@ arch [x86_64]: 4. cpu:  A specific description of the CPU of this machine, inclu
 cpu [AMD EPYC 7702 64-Core Processor]: 5. num_cpu:  The number of CPUs in the system. For example, '4'.
 num_cpu [256]: 6. ram:  The amount of physical RAM on this machine.  For example,
    '4GB'.
-ram [540280922112]: · Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 
+ram [540281294848]: · Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 
 · Unknown environment type 'rattler'. Allowed values based on existing plugins are ['existing', 'conda', 'uv', 'virtualenv']. 
 · Discovering benchmarks
-· Running 13 total benchmarks (1 commits * 1 environments * 13 benchmarks)
+· Running 6 total benchmarks (1 commits * 1 environments * 6 benchmarks)
 [ 0.00%] ·· Benchmarking existing-py_data_horse_ws_vlle130h-python_virtual_environment_bin_python3
 · Discovering benchmarks
-· Running 13 total benchmarks (1 commits * 1 environments * 13 benchmarks)
+· Running 6 total benchmarks (1 commits * 1 environments * 6 benchmarks)
 [ 0.00%] ·· Benchmarking existing-py_data_horse_ws_vlle130h-python_virtual_environment_bin_python3
-[ 3.85%] ··· Running (algorithms.Duplicated.time_duplicated--).
-[ 3.85%] ··· Running (algorithms.Duplicated.time_duplicated--).
-[ 7.69%] ··· Running (algorithms.DuplicatedMaskedArray.time_duplicated--)..
-[ 7.69%] ··· Running (algorithms.DuplicatedMaskedArray.time_duplicated--)..
-[19.23%] ··· Running (algorithms.Quantile.time_quantile--).
-[23.08%] ··· Running (algorithms.SortIntegerArray.time_argsort--).
-[26.92%] ··· Setting up algorithms:147                                       ok
-[26.92%] ··· Running (algorithms.Hashing.time_frame--).......
-[19.23%] ··· Running (algorithms.Quantile.time_quantile--).
-[23.08%] ··· Running (algorithms.SortIntegerArray.time_argsort--).
-[26.92%] ··· Setting up algorithms:147                                       ok
-[26.92%] ··· Running (algorithms.Hashing.time_frame--).......
-[53.85%] ··· algorithms.Duplicated.time_duplicated                           ok
-[53.85%] ··· ======== ======= ======================== =============
-              unique    keep           dtype                        
-             -------- ------- ------------------------ -------------
-               True    first           int64            1.95±0.01μs 
-               True    first           uint64           1.96±0.01μs 
-               True    first          float64           1.93±0.03μs 
-               True    first           string           1.97±0.01μs 
-               True    first       datetime64[ns]       2.00±0.01μs 
-               True    first     datetime64[ns, tz]     1.96±0.01μs 
-               True    first   timestamp[ms][pyarrow]   2.15±0.01μs 
-               True    first    duration[s][pyarrow]    2.15±0.01μs 
-               True     last           int64            1.94±0.01μs 
-               True     last           uint64           1.97±0.03μs 
-               True     last          float64           1.95±0.01μs 
-               True     last           string           1.93±0.01μs 
-               True     last       datetime64[ns]       1.96±0.01μs 
-               True     last     datetime64[ns, tz]     1.96±0.01μs 
-               True     last   timestamp[ms][pyarrow]   2.13±0.01μs 
-               True     last    duration[s][pyarrow]    2.13±0.01μs 
-               True    False           int64            1.94±0.01μs 
-               True    False           uint64           1.94±0.02μs 
-               True    False          float64           1.94±0.01μs 
-               True    False           string           1.95±0.02μs 
-               True    False       datetime64[ns]         1.95±0μs  
-               True    False     datetime64[ns, tz]     1.97±0.03μs 
-               True    False   timestamp[ms][pyarrow]   2.17±0.02μs 
-               True    False    duration[s][pyarrow]    2.17±0.04μs 
-              False    first           int64            3.89±0.03ms 
-              False    first           uint64           3.90±0.03ms 
-              False    first          float64            6.44±0.1ms 
-              False    first           string            8.56±0.2ms 
-              False    first       datetime64[ns]        5.12±0.2ms 
-              False    first     datetime64[ns, tz]      5.16±0.5ms 
-              False    first   timestamp[ms][pyarrow]   4.07±0.04ms 
-              False    first    duration[s][pyarrow]    4.10±0.03ms 
-              False     last           int64            3.95±0.05ms 
-              False     last           uint64           3.90±0.03ms 
-              False     last          float64           6.55±0.08ms 
-              False     last           string            8.69±0.1ms 
-              False     last       datetime64[ns]       4.84±0.07ms 
-              False     last     datetime64[ns, tz]      4.86±0.1ms 
-              False     last   timestamp[ms][pyarrow]   3.93±0.05ms 
-              False     last    duration[s][pyarrow]    4.01±0.05ms 
-              False    False           int64            6.88±0.05ms 
-              False    False           uint64           6.80±0.05ms 
-              False    False          float64            11.9±0.1ms 
-              False    False           string            15.5±0.2ms 
-              False    False       datetime64[ns]        11.7±0.2ms 
-              False    False     datetime64[ns, tz]      11.9±0.8ms 
-              False    False   timestamp[ms][pyarrow]    7.07±0.1ms 
-              False    False    duration[s][pyarrow]    7.15±0.04ms 
-             ======== ======= ======================== =============
-
-[57.69%] ··· ...rithms.DuplicatedMaskedArray.time_duplicated                 ok
-[57.69%] ··· ======== ======= ============ =============
-             --                         dtype           
-             ---------------- --------------------------
-              unique    keep     Int64        Float64   
-             ======== ======= ============ =============
-               True    first    593±30μs    2.13±0.01ms 
-               True     last    552±5μs     2.14±0.01ms 
-               True    False    799±8μs     2.95±0.01ms 
-              False    first   4.14±0.7ms    6.48±0.6ms 
-              False     last   3.99±0.6ms    6.53±0.6ms 
-              False    False    6.82±1ms     11.5±0.3ms 
-             ======== ======= ============ =============
-
-[53.85%] ··· algorithms.Duplicated.time_duplicated                           ok
-[53.85%] ··· ======== ======= ======================== =============
-              unique    keep           dtype                        
-             -------- ------- ------------------------ -------------
-               True    first           int64              1.92±0μs  
-               True    first           uint64             1.92±0μs  
-               True    first          float64             1.93±0μs  
-               True    first           string           1.97±0.02μs 
-               True    first       datetime64[ns]       1.96±0.03μs 
-               True    first     datetime64[ns, tz]     1.98±0.02μs 
-               True    first   timestamp[ms][pyarrow]   2.15±0.01μs 
-               True    first    duration[s][pyarrow]    2.16±0.01μs 
-               True     last           int64            1.96±0.02μs 
-               True     last           uint64           1.93±0.01μs 
-               True     last          float64           1.93±0.01μs 
-               True     last           string           1.92±0.02μs 
-               True     last       datetime64[ns]       1.99±0.03μs 
-               True     last     datetime64[ns, tz]       1.98±0μs  
-               True     last   timestamp[ms][pyarrow]   2.18±0.01μs 
-               True     last    duration[s][pyarrow]    2.14±0.02μs 
-               True    False           int64            1.93±0.01μs 
-               True    False           uint64           1.96±0.02μs 
-               True    False          float64           1.96±0.01μs 
-               True    False           string           1.96±0.02μs 
-               True    False       datetime64[ns]       1.96±0.01μs 
-               True    False     datetime64[ns, tz]     1.98±0.02μs 
-               True    False   timestamp[ms][pyarrow]   2.17±0.01μs 
-               True    False    duration[s][pyarrow]    2.15±0.03μs 
-              False    first           int64            3.90±0.03ms 
-              False    first           uint64           3.93±0.03ms 
-              False    first          float64            6.60±0.1ms 
-              False    first           string            8.78±0.2ms 
-              False    first       datetime64[ns]       5.14±0.08ms 
-              False    first     datetime64[ns, tz]      5.27±0.4ms 
-              False    first   timestamp[ms][pyarrow]   4.10±0.06ms 
-              False    first    duration[s][pyarrow]    4.18±0.03ms 
-              False     last           int64             3.84±0.1ms 
-              False     last           uint64           3.79±0.03ms 
-              False     last          float64            6.52±0.1ms 
-              False     last           string            8.57±0.2ms 
-              False     last       datetime64[ns]        4.97±0.1ms 
-              False     last     datetime64[ns, tz]      5.12±0.5ms 
-              False     last   timestamp[ms][pyarrow]   4.01±0.07ms 
-              False     last    duration[s][pyarrow]    4.00±0.04ms 
-              False    False           int64            6.87±0.06ms 
-              False    False           uint64           6.74±0.07ms 
-              False    False          float64            12.2±0.3ms 
-              False    False           string            15.4±0.3ms 
-              False    False       datetime64[ns]        11.6±0.2ms 
-              False    False     datetime64[ns, tz]      11.7±0.2ms 
-              False    False   timestamp[ms][pyarrow]   7.16±0.02ms 
-              False    False    duration[s][pyarrow]    7.04±0.04ms 
-             ======== ======= ======================== =============
-
-[57.69%] ··· ...rithms.DuplicatedMaskedArray.time_duplicated                 ok
-[57.69%] ··· ======== ======= ============ =============
-             --                         dtype           
-             ---------------- --------------------------
-              unique    keep     Int64        Float64   
-             ======== ======= ============ =============
-               True    first    568±2μs     2.15±0.01ms 
-               True     last    554±4μs     2.14±0.01ms 
-               True    False    811±10μs      2.97±0ms  
-              False    first   4.10±0.7ms    6.50±0.5ms 
-              False     last   4.09±0.7ms    6.52±0.5ms 
-              False    False    6.27±1ms     11.6±0.4ms 
-             ======== ======= ============ =============
-
-[61.54%] ··· algorithms.Factorize.time_factorize                             ok
-[61.54%] ··· ======== ======= ==================== =============
-              unique    sort         dtype                      
-             -------- ------- -------------------- -------------
-               True     True         int64          2.07±0.03ms 
-               True     True        float64         9.79±0.07ms 
-               True     True         object          35.3±0.3ms 
-               True     True       object_str         75.2±1ms  
-               True     True     datetime64[ns]       76.0±1μs  
-               True     True   datetime64[ns, tz]    73.3±0.6μs 
-               True     True         Int64          2.54±0.01ms 
-               True     True    string[pyarrow]      16.3±0.1ms 
-               True    False         int64          1.19±0.01ms 
-               True    False        float64         3.52±0.02ms 
-               True    False         object          7.38±0.1ms 
-               True    False       object_str       6.94±0.03ms 
-               True    False     datetime64[ns]      71.5±0.3μs 
-               True    False   datetime64[ns, tz]     72.7±2μs  
-               True    False         Int64          1.21±0.01ms 
-               True    False    string[pyarrow]     6.45±0.06ms 
-              False     True         int64           9.59±0.6ms 
-              False     True        float64           21.4±1ms  
-              False     True         object          57.1±0.5ms 
-              False     True       object_str        92.0±0.8ms 
-              False     True     datetime64[ns]      19.2±0.5ms 
-              False     True   datetime64[ns, tz]    19.1±0.4ms 
-              False     True         Int64            10.7±2ms  
-              False     True    string[pyarrow]      27.0±0.5ms 
-              False    False         int64           8.69±0.6ms 
-              False    False        float64          14.9±0.3ms 
-              False    False         object          27.7±0.9ms 
-              False    False       object_str         24.4±1ms  
-              False    False     datetime64[ns]     13.8±0.09ms 
-              False    False   datetime64[ns, tz]     14.8±1ms  
-              False    False         Int64            6.79±1ms  
-              False    False    string[pyarrow]      14.3±0.1ms 
-             ======== ======= ==================== =============
-
-[65.38%] ··· algorithms.FactorizePeakmem.peakmem_factorize                   ok
-[65.38%] ··· ==================== ======
-                    dtype               
-             -------------------- ------
-                    int64          119M 
-                   float64         118M 
-                    object         107M 
-                  object_str       124M 
-                datetime64[ns]     119M 
-              datetime64[ns, tz]   117M 
-                    Int64          120M 
-               string[pyarrow]     145M 
-             ==================== ======
-
-[69.23%] ··· algorithms.Quantile.time_quantile                               ok
-[69.23%] ··· ========== =============== ============= =============
-             --                                    dtype           
-             -------------------------- ---------------------------
-              quantile   interpolation     float64        int64    
-             ========== =============== ============= =============
-                 0           linear      2.10±0.01ms   1.47±0.01ms 
-                 0          nearest      1.37±0.02ms     795±10μs  
-                 0           lower         1.37±0ms      808±6μs   
-                 0           higher      1.36±0.01ms     778±8μs   
-                 0          midpoint     2.10±0.01ms   1.48±0.01ms 
-                0.5          linear      3.88±0.01ms   1.45±0.01ms 
-                0.5         nearest      3.18±0.01ms     897±6μs   
-                0.5          lower       3.16±0.01ms     907±10μs  
-                0.5          higher      3.18±0.04ms     900±7μs   
-                0.5         midpoint     3.91±0.01ms     1.47±0ms  
-                 1           linear      1.42±0.01ms     1.16±0ms  
-                 1          nearest        951±10μs      746±20μs  
-                 1           lower         944±20μs      718±3μs   
-                 1           higher        961±9μs       715±20μs  
-                 1          midpoint     1.44±0.01ms   1.18±0.01ms 
-             ========== =============== ============= =============
-
-[73.08%] ··· algorithms.SortIntegerArray.time_argsort                        ok
-[73.08%] ··· ======== =============
-              param1               
-             -------- -------------
-               1000    17.0±0.04μs 
-              100000     632±4μs   
-             ======== =============
-
-[76.92%] ··· algorithms.Hashing.time_frame                          10.5±0.09ms
-[61.54%] ··· algorithms.Factorize.time_factorize                             ok
-[61.54%] ··· ======== ======= ==================== =============
-              unique    sort         dtype                      
-             -------- ------- -------------------- -------------
-               True     True         int64          2.02±0.03ms 
-               True     True        float64         9.71±0.05ms 
-               True     True         object           34.6±1ms  
-               True     True       object_str         75.4±1ms  
-               True     True     datetime64[ns]       73.7±2μs  
-               True     True   datetime64[ns, tz]     74.1±1μs  
-               True     True         Int64          2.59±0.01ms 
-               True     True    string[pyarrow]      16.4±0.3ms 
-               True    False         int64          1.18±0.02ms 
-               True    False        float64         3.54±0.01ms 
-               True    False         object         7.34±0.08ms 
-               True    False       object_str       6.89±0.06ms 
-               True    False     datetime64[ns]      72.9±0.6μs 
-               True    False   datetime64[ns, tz]    72.0±0.2μs 
-               True    False         Int64            1.21±0ms  
-               True    False    string[pyarrow]      6.46±0.2ms 
-              False     True         int64            9.45±1ms  
-              False     True        float64          21.2±0.9ms 
-              False     True         object           57.7±1ms  
-              False     True       object_str         94.0±1ms  
-              False     True     datetime64[ns]      17.8±0.9ms 
-              False     True   datetime64[ns, tz]    18.8±0.6ms 
-              False     True         Int64            10.6±2ms  
-              False     True    string[pyarrow]     26.6±0.08ms 
-              False    False         int64           8.18±0.1ms 
-              False    False        float64          14.8±0.1ms 
-              False    False         object           27.1±1ms  
-              False    False       object_str         23.1±1ms  
-              False    False     datetime64[ns]       14.1±1ms  
-              False    False   datetime64[ns, tz]    15.1±0.9ms 
-              False    False         Int64            7.44±1ms  
-              False    False    string[pyarrow]      14.4±0.1ms 
-             ======== ======= ==================== =============
-
-[80.77%] ··· algorithms.Hashing.time_series_categorical             1.69±0.03ms
-[84.62%] ··· algorithms.Hashing.time_series_dates                      796±20μs
-[88.46%] ··· algorithms.Hashing.time_series_float                      794±20μs
-[92.31%] ··· algorithms.Hashing.time_series_int                         767±3μs
-[96.15%] ··· algorithms.Hashing.time_series_string                  7.91±0.03ms
-[100.00%] ··· algorithms.Hashing.time_series_timedeltas                  768±4μs
-[65.38%] ··· algorithms.FactorizePeakmem.peakmem_factorize                   ok
-[65.38%] ··· ==================== ======
-                    dtype               
-             -------------------- ------
-                    int64          116M 
-                   float64         116M 
-                    object         108M 
-                  object_str       131M 
-                datetime64[ns]     119M 
-              datetime64[ns, tz]   115M 
-                    Int64          119M 
-               string[pyarrow]     141M 
-             ==================== ======
-
-[69.23%] ··· algorithms.Quantile.time_quantile                               ok
-[69.23%] ··· ========== =============== ============= =============
-             --                                    dtype           
-             -------------------------- ---------------------------
-              quantile   interpolation     float64        int64    
-             ========== =============== ============= =============
-                 0           linear      2.10±0.02ms   1.47±0.02ms 
-                 0          nearest      1.38±0.01ms     820±5μs   
-                 0           lower       1.40±0.02ms     813±20μs  
-                 0           higher      1.40±0.01ms     803±4μs   
-                 0          midpoint     2.14±0.01ms   1.52±0.01ms 
-                0.5          linear      3.93±0.01ms   1.47±0.01ms 
-                0.5         nearest      3.20±0.02ms     915±10μs  
-                0.5          lower       3.20±0.02ms     899±20μs  
-                0.5          higher      3.20±0.01ms     896±10μs  
-                0.5         midpoint     3.92±0.03ms   1.47±0.03ms 
-                 1           linear      1.42±0.02ms   1.12±0.02ms 
-                 1          nearest        968±10μs      717±10μs  
-                 1           lower         922±10μs      703±10μs  
-                 1           higher        922±2μs       717±40μs  
-                 1          midpoint     1.41±0.01ms     1.15±0ms  
-             ========== =============== ============= =============
-
-[73.08%] ··· algorithms.SortIntegerArray.time_argsort                        ok
-[73.08%] ··· ======== ============
-              param1              
-             -------- ------------
-               1000    16.9±0.1μs 
-              100000    631±6μs   
-             ======== ============
-
-[76.92%] ··· algorithms.Hashing.time_frame                           10.3±0.1ms
-[80.77%] ··· algorithms.Hashing.time_series_categorical             1.66±0.03ms
-[84.62%] ··· algorithms.Hashing.time_series_dates                      806±20μs
-[88.46%] ··· algorithms.Hashing.time_series_float                      828±20μs
-[92.31%] ··· algorithms.Hashing.time_series_int                         751±4μs
-[96.15%] ··· algorithms.Hashing.time_series_string                  7.93±0.09ms
-[100.00%] ··· algorithms.Hashing.time_series_timedeltas                 781±30μs
-[11.11%] · Loading machine info
-[22.22%] · Getting params, commits, tags and branches
-[33.33%] · Loading results
-[44.44%] · Detecting steps
-[55.56%] · Generating graphs
-[66.67%] · Generating output for SummaryGrid
-[77.78%] · Generating output for SummaryList
-[88.89%] · Generating output for Regressions
-[100.00%] · Writing index
+[ 8.33%] ··· Running (algorithms.Duplicated.time_duplicated--).
+[ 8.33%] ··· Running (algorithms.Duplicated.time_duplicated--).
+[16.67%] ··· Running (algorithms.DuplicatedMaskedArray.time_duplicated--)..
+[16.67%] ··· Running (algorithms.DuplicatedMaskedArray.time_duplicated--)..

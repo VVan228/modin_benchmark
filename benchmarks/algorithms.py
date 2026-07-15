@@ -4,12 +4,12 @@ import numpy as np
 
 import pandas as pd
 
-for imp in ["pandas.util", "pandas.tools.hashing"]:
-    try:
-        hashing = import_module(imp)
-        break
-    except (ImportError, TypeError, ValueError):
-        pass
+#for imp in ["pandas.util", "pandas.tools.hashing"]:
+#    try:
+#        hashing = import_module(imp)
+#        break
+#    except (ImportError, TypeError, ValueError):
+#        pass
 
 
 def _make_factorize_data(dtype, N):
@@ -143,51 +143,51 @@ class DuplicatedMaskedArray:
         self.ser.duplicated(keep=keep)
 
 
-class Hashing:
-    def setup_cache(self):
-        # setup_cache runs in a different sub-process where module-level setup is
-        # never called,so seed locally to keep the cached frame reproducible
-        # across runs.
-        np.random.seed(1234)
-        N = 10**5
-
-        df = pd.DataFrame(
-            {
-                "strings": pd.Series(
-                    pd.Index([f"i-{i}" for i in range(10000)], dtype=object).take(
-                        np.random.randint(0, 10000, size=N)
-                    )
-                ),
-                "floats": np.random.randn(N),
-                "ints": np.arange(N),
-                "dates": pd.date_range("20110101", freq="s", periods=N),
-                "timedeltas": pd.timedelta_range("1 day", freq="s", periods=N),
-            }
-        )
-        df["categories"] = df["strings"].astype("category")
-        df.iloc[10:20] = np.nan
-        return df
-
-    def time_frame(self, df):
-        hashing.hash_pandas_object(df)
-
-    def time_series_int(self, df):
-        hashing.hash_pandas_object(df["ints"])
-
-    def time_series_string(self, df):
-        hashing.hash_pandas_object(df["strings"])
-
-    def time_series_float(self, df):
-        hashing.hash_pandas_object(df["floats"])
-
-    def time_series_categorical(self, df):
-        hashing.hash_pandas_object(df["categories"])
-
-    def time_series_timedeltas(self, df):
-        hashing.hash_pandas_object(df["timedeltas"])
-
-    def time_series_dates(self, df):
-        hashing.hash_pandas_object(df["dates"])
+#class Hashing:
+#    def setup_cache(self):
+#        # setup_cache runs in a different sub-process where module-level setup is
+#        # never called,so seed locally to keep the cached frame reproducible
+#        # across runs.
+#        np.random.seed(1234)
+#        N = 10**5
+#
+#        df = pd.DataFrame(
+#            {
+#                "strings": pd.Series(
+#                    pd.Index([f"i-{i}" for i in range(10000)], dtype=object).take(
+#                        np.random.randint(0, 10000, size=N)
+#                    )
+#                ),
+#                "floats": np.random.randn(N),
+#                "ints": np.arange(N),
+#                "dates": pd.date_range("20110101", freq="s", periods=N),
+#                "timedeltas": pd.timedelta_range("1 day", freq="s", periods=N),
+#            }
+#        )
+#        df["categories"] = df["strings"].astype("category")
+#        df.iloc[10:20] = np.nan
+#        return df
+#
+#    def time_frame(self, df):
+#        hashing.hash_pandas_object(df)
+#
+#    def time_series_int(self, df):
+#        hashing.hash_pandas_object(df["ints"])
+#
+#    def time_series_string(self, df):
+#        hashing.hash_pandas_object(df["strings"])
+#
+#    def time_series_float(self, df):
+#        hashing.hash_pandas_object(df["floats"])
+#
+#    def time_series_categorical(self, df):
+#        hashing.hash_pandas_object(df["categories"])
+#
+#    def time_series_timedeltas(self, df):
+#        hashing.hash_pandas_object(df["timedeltas"])
+#
+#    def time_series_dates(self, df):
+#        hashing.hash_pandas_object(df["dates"])
 
 
 class Quantile:
