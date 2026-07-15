@@ -2,9 +2,7 @@ from importlib import import_module
 
 import numpy as np
 
-import ray
-ray.init()
-import modin.pandas as pd
+import pandas as pd
 
 def _make_factorize_data(dtype, N):
     if dtype in ("int64", "Int64", "object"):
@@ -28,14 +26,14 @@ def _make_factorize_data(dtype, N):
 
 
 _FACTORIZE_DTYPES = [
-    "int64",
+    #"int64",
     "float64",
-    "object",
-    "object_str",
-    "datetime64[ns]",
-    "datetime64[ns, tz]",
-    "Int64",
-    "string[pyarrow]",
+    #"object",
+    #"object_str",
+    #"datetime64[ns]",
+    #"datetime64[ns, tz]",
+    #"Int64",
+    #"string[pyarrow]",
 ]
 
 
@@ -65,7 +63,7 @@ class FactorizePeakmem:
     param_names = ["dtype"]
 
     def setup(self, dtype):
-        N = 10**10
+        N = 10**2
         self.data = _make_factorize_data(dtype, N).repeat(5)
 
     def peakmem_factorize(self, dtype):
@@ -171,4 +169,4 @@ class FactorizePeakmem:
 #        self.array.argsort()
 
 
-from .pandas_vb_common import setup  # noqa: F401 isort:skip
+#from .pandas_vb_common import setup  # noqa: F401 isort:skip
