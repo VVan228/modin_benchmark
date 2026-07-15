@@ -63,7 +63,7 @@ class FactorizePeakmem:
     param_names = ["dtype"]
 
     def setup(self, dtype):
-        N = 10**2
+        N = 10**10
         self.data = _make_factorize_data(dtype, N).repeat(5)
 
     def peakmem_factorize(self, dtype):
